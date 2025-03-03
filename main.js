@@ -693,9 +693,7 @@ class Player {
       { id: 'player-level-value', value: this.level },
       {
         id: 'player-experience-value',
-        value: `(${
-          this.experience
-        }/${this.getRequiredExperienceForNextLevel()})`,
+        value: `${Math.round((this.experience / this.getRequiredExperienceForNextLevel()) * 100)}%`,
       },
       { id: 'player-gold-value', value: this.gold },
       { id: 'player-magic-find-value', value: this.baseStats.magicFind },
