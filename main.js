@@ -1167,15 +1167,16 @@ function spawnEntityForSquare(square, entityType) {
       y: parseInt(square.dataset.coord.split(',')[1]),
     };
 
-    const entityDiv = createElement(
+    createAndAppendElement(
+      square,
       'div',
       `${entityType} ${newEntity.id}`,
       '',
+      '',
       {
-        'data-instance-id': newEntity.instanceId,
+        'data-instance-id': newEntity.instanceId
       }
     );
-    square.appendChild(entityDiv);
 
     const levelNameDisplay = createElement('div', 'level-name-display', '', {
       'data-instance-id': newEntity.instanceId,
