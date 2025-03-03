@@ -1,502 +1,502 @@
 @font-face {
-    font-family: 'TinyPixel';
-    src: url('assets/fonts/tinypixel.otf') format('opentype');
+  font-family: 'TinyPixel';
+  src: url('assets/fonts/tinypixel.otf') format('opentype');
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'TinyPixel', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'TinyPixel', sans-serif;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: url('assets/sprites/cursors/computer-systems/pointer.png'), auto;
-    image-rendering: pixelated;
-    overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: url('assets/sprites/cursors/computer-systems/pointer.png'), auto;
+  image-rendering: pixelated;
+  overflow: hidden;
 }
 
 .game-board {
-    flex: 0 0 800px;
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(13, 100px);
-    grid-template-rows: repeat(8, 100px);
-    gap: 0;
-    overflow: hidden;
+  flex: 0 0 800px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(13, 100px);
+  grid-template-rows: repeat(8, 100px);
+  gap: 0;
+  overflow: hidden;
 }
 
 .square {
-    width: 100px;
-    height: 100px;
-    background-color: #3d3d3d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .player {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/sprites/player/player.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    image-rendering: pixelated;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/sprites/player/player.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
 }
 
 .fire-biome {
-    background-image: url('assets/sprites/tiles/fire/terrain.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('assets/sprites/tiles/fire/terrain.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #fire-biome-tile1 {
-    background-image: url('assets/sprites/tiles/fire/tile1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('assets/sprites/tiles/fire/tile1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #fire-biome-tile2 {
-    background-image: url('assets/sprites/tiles/fire/tile2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('assets/sprites/tiles/fire/tile2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #fire-biome-tile3 {
-    background-image: url('assets/sprites/tiles/fire/tile3.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('assets/sprites/tiles/fire/tile3.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #fire-biome-tile4 {
-    background-image: url('assets/sprites/tiles/fire/tile4.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('assets/sprites/tiles/fire/tile4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #fire-biome-tile5 {
-    background-image: url('assets/sprites/tiles/fire/tile5.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('assets/sprites/tiles/fire/tile5.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .grass-biome {
-    background-image: url('assets/sprites/tiles/grass/terrain.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('assets/sprites/tiles/grass/terrain.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .poison-biome {
-    background-image: url('assets/sprites/tiles/poison/terrain.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url('assets/sprites/tiles/poison/terrain.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .goblin {
-    background-image: url('assets/sprites/entities/goblins/goblin.png');
+  background-image: url('assets/sprites/entities/goblins/goblin.png');
 }
 
 .fire-goblin {
-    background-image: url('assets/sprites/entities/goblins/fire-goblin.png');
+  background-image: url('assets/sprites/entities/goblins/fire-goblin.png');
 }
 
 .poison-goblin {
-    background-image: url('assets/sprites/entities/goblins/poison-goblin.png');
+  background-image: url('assets/sprites/entities/goblins/poison-goblin.png');
 }
 
 .stone {
-    background-image: url('assets/sprites/entities/gatherables/stone.png');
-    background-size: cover;
+  background-image: url('assets/sprites/entities/gatherables/stone.png');
+  background-size: cover;
 }
 
 .fire-bush {
-    background-image: url('assets/sprites/entities/gatherables/fire-bush.png');
-    background-size: cover;
+  background-image: url('assets/sprites/entities/gatherables/fire-bush.png');
+  background-size: cover;
 }
 
 .gatherable {
-    image-rendering: pixelated;
-    width: 100%;
-    height: 100%;
+  image-rendering: pixelated;
+  width: 100%;
+  height: 100%;
 }
 
 .npc {
-    image-rendering: pixelated;
-    width: 100%;
-    height: 100%;
+  image-rendering: pixelated;
+  width: 100%;
+  height: 100%;
 }
 
 .friendly-npc {
-    background-image: url('assets/sprites/entities/npcs/friendly-npc.png');
-    background-size: cover;
+  background-image: url('assets/sprites/entities/npcs/friendly-npc.png');
+  background-size: cover;
 }
 
 .enemy {
-    image-rendering: pixelated;
-    background-size: 400%;
-    width: 100%;
-    height: 100%;
-    animation: poison-goblin-idle 2s steps(4) infinite;
+  image-rendering: pixelated;
+  background-size: 400%;
+  width: 100%;
+  height: 100%;
+  animation: poison-goblin-idle 2s steps(4) infinite;
 }
 
 .enemy:hover,
 .gatherable:hover,
 .npctable:hover {
-    cursor: url('assets/sprites/cursors/computer-systems/move.png'), auto;
+  cursor: url('assets/sprites/cursors/computer-systems/move.png'), auto;
 }
 
 @keyframes goblin-idle {
-    from {
-        background-position: 0 0;
-    }
+  from {
+    background-position: 0 0;
+  }
 
-    to {
-        background-position: -400% 0;
-    }
+  to {
+    background-position: -400% 0;
+  }
 }
 
 @keyframes fire-goblin-idle {
-    from {
-        background-position: 0 0;
-    }
+  from {
+    background-position: 0 0;
+  }
 
-    to {
-        background-position: -400% 0;
-    }
+  to {
+    background-position: -400% 0;
+  }
 }
 
 @keyframes poison-goblin-idle {
-    from {
-        background-position: 0 0;
-    }
+  from {
+    background-position: 0 0;
+  }
 
-    to {
-        background-position: -400% 0;
-    }
+  to {
+    background-position: -400% 0;
+  }
 }
 
 .level-name-display {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.25);
-    color: #fff;
-    text-shadow: 2px 2px 0px black;
-    padding: 2px 5px;
-    font-size: 12px;
-    pointer-events: none;
-    width: max-content;
-    z-index: 1000;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-shadow: 2px 2px 0px black;
+  padding: 2px 5px;
+  font-size: 12px;
+  pointer-events: none;
+  width: max-content;
+  z-index: 1000;
 }
 
 #dangerousness-easy {
-    color: #99e65f;
+  color: #99e65f;
 }
 
 #dangerousness-medium {
-    color: #ffc825;
+  color: #ffc825;
 }
 
 #dangerousness-hard {
-    color: #f5555d;
+  color: #f5555d;
 }
 
 #dangerousness-very-hard {
-    color: #ea323c;
+  color: #ea323c;
 }
 
 #dangerousness-impossible {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 #dangerousness-impossible img {
-    image-rendering: pixelated;
-    background-size: 400%;
-    width: 8px;
-    height: 8px;
+  image-rendering: pixelated;
+  background-size: 400%;
+  width: 8px;
+  height: 8px;
 }
 
 .health-display {
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.25);
-    color: white;
-    text-shadow: 2px 2px 0px black;
-    padding: 2px 5px;
-    font-size: 12px;
-    pointer-events: none;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  text-shadow: 2px 2px 0px black;
+  padding: 2px 5px;
+  font-size: 12px;
+  pointer-events: none;
 }
 
 #player-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: calc(100% - 40px);
-    width: 100%;
-    background-color: #3d3d3d;
-    color: white;
-    text-shadow: 2px 2px 0px black;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100% - 40px);
+  width: 100%;
+  background-color: #3d3d3d;
+  color: white;
+  text-shadow: 2px 2px 0px black;
+  padding: 20px;
 }
 
 #switch-additional-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: min-content;
-    height: max-content;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  height: max-content;
+  gap: 16px;
 }
 
 #player-view-switch {
-    display: flex;
-    gap: 8px;
-    width: 100%;
-    height: 40px;
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  height: 40px;
 }
 
 #player-view-switch button {
-    background-color: #515151;
-    box-shadow: 4px 4px 0px black;
-    color: white;
-    border: none;
-    cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #515151;
+  box-shadow: 4px 4px 0px black;
+  color: white;
+  border: none;
+  cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .playable-and-bottom-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 70%;
 }
 
 .bottom-bar {
-    flex: 1;
-    width: 100%;
-    background-color: #3d3d3d;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  flex: 1;
+  width: 100%;
+  background-color: #3d3d3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #equipment {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .equipable-slots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .armour-slots {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .wearable-slots {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .equipment-slot,
 .inventory-slot {
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 4px 4px 0px black;
-    text-align: center;
-    font-size: 10px;
-    position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 0px black;
+  text-align: center;
+  font-size: 10px;
+  position: relative;
 }
 
 .inventory-slot.has-item:hover {
-    cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
-    image-rendering: pixelated;
+  cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
+  image-rendering: pixelated;
 }
 
 #inventory {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
 }
 
 #trash {
-    width: 100px;
-    height: 100px;
-    background-color: #ea323c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 4px 4px 0px black;
-    text-align: center;
-    font-size: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #ea323c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 0px black;
+  text-align: center;
+  font-size: 10px;
 }
 
 .rare-drop-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    padding: 10px;
-    pointer-events: none;
-    text-shadow: 2px 2px 0px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 10px;
+  pointer-events: none;
+  text-shadow: 2px 2px 0px black;
 }
 
 #rare {
-    color: gold;
+  color: gold;
 }
 
 #magic-find {
-    color: #0cf1ff;
+  color: #0cf1ff;
 }
 
 .item-sprite {
-    image-rendering: pixelated;
-    background-size: 400%;
-    width: 100%;
-    height: 100%;
+  image-rendering: pixelated;
+  background-size: 400%;
+  width: 100%;
+  height: 100%;
 }
 
 .item-quantity {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 14px;
-    text-shadow: 2px 2px 0px black;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  text-shadow: 2px 2px 0px black;
 }
 
 .tooltip {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 5px 10px;
-    font-size: 16px;
-    pointer-events: none;
-    z-index: 1000;
-    transform: translateX(-50%);
-    width: 300px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translateX(-50%);
+  width: 300px;
 }
 
 #item-rarity-common {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 #item-rarity-uncommon {
-    color: #99e65f;
+  color: #99e65f;
 }
 
 #item-rarity-rare {
-    color: #00cdf9;
+  color: #00cdf9;
 }
 
 #item-rarity-epic {
-    color: #db3ffd;
+  color: #db3ffd;
 }
 
 #item-rarity-legendary {
-    color: #ffc825;
+  color: #ffc825;
 }
 
 #item-rarity-mythic {
-    color: #f389f5;
+  color: #f389f5;
 }
 
 #item-description,
 #ability-description {
-    color: #c7cfdd;
+  color: #c7cfdd;
 }
 
 #item-price-label {
-    color: #ffeb57;
+  color: #ffeb57;
 }
 
 #item-price {
-    color: #ffc825;
+  color: #ffc825;
 }
 
 .progress-bars {
-    text-shadow: 2px 2px 0px black;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 240px;
+  text-shadow: 2px 2px 0px black;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 240px;
 }
 
 .progress-bar {
-    width: 100%;
-    background-color: #e0e0e0;
-    overflow: hidden;
+  width: 100%;
+  background-color: #e0e0e0;
+  overflow: hidden;
 }
 
 .progress {
-    height: 20px;
-    background-color: #76c7c0;
-    width: 0;
-    transition: width 0.3s;
+  height: 20px;
+  background-color: #76c7c0;
+  width: 0;
+  transition: width 0.3s;
 }
 
 .health-progress {
-    background-color: #f5555d;
+  background-color: #f5555d;
 }
 
 .level-progress {
-    background-color: #99e65f;
+  background-color: #99e65f;
 }
 
 .stat-change {
-    position: absolute;
-    font-size: 16px;
-    color: #fff;
-    animation: statChangeAnimation 2s ease-out forwards;
-    pointer-events: none;
-    text-shadow: 2px 2px 0px black;
-    z-index: 1000;
+  position: absolute;
+  font-size: 16px;
+  color: #fff;
+  animation: statChangeAnimation 2s ease-out forwards;
+  pointer-events: none;
+  text-shadow: 2px 2px 0px black;
+  z-index: 1000;
 }
 
 @keyframes statChangeAnimation {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-    100% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
 
 #player-gold-label,
@@ -512,284 +512,284 @@ body {
 #player-strength-label,
 #player-gathering-power-label,
 #player-gathering-speed-label {
-    text-shadow: 2px 2px 0px black;
+  text-shadow: 2px 2px 0px black;
 }
 
 #player-gold-value,
 #player-gathering-power-label,
 #player-attack-speed-value,
 #player-gathering-speed-value {
-    color: #ffc825;
+  color: #ffc825;
 }
 
 #player-magic-find-value {
-    color: #0cf1ff;
+  color: #0cf1ff;
 }
 
 #player-attack-value,
 #player-health-value,
 #player-strength-label {
-    color: #f5555d;
+  color: #f5555d;
 }
 
 #player-defense-value,
 #player-level-value,
 #player-experience-value {
-    color: #99e65f;
+  color: #99e65f;
 }
 
 #player-magic-find-label {
-    color: #94fdff;
+  color: #94fdff;
 }
 
 #player-attack-label {
-    color: #f68187;
+  color: #f68187;
 }
 
 #player-defense-label {
-    color: #d3fc7e;
+  color: #d3fc7e;
 }
 
 #player-attack-speed-label,
 #player-gold-label,
 #player-gathering-speed-label {
-    color: #ffeb57;
+  color: #ffeb57;
 }
 
 #player-health-label {
-    color: #f68187;
+  color: #f68187;
 }
 
 #player-level-label {
-    color: #d3fc7e;
+  color: #d3fc7e;
 }
 
 #player-fortune-label,
 #player-gathering-power-value {
-    color: #ffa214;
+  color: #ffa214;
 }
 
 #player-combat-fortune-value,
 #player-gathering-fortune-value {
-    color: #ed7614;
+  color: #ed7614;
 }
 
 #player-speed-label {
-    color: #fff;
+  color: #fff;
 }
 
 #player-speed-value {
-    color: #c7cfdd;
+  color: #c7cfdd;
 }
 
 #player-wisdom-label {
-    color: #858585;
+  color: #858585;
 }
 
 #player-combat-wisdom-value,
 #player-gathering-wisdom-value {
-    color: #5d5d5d;
+  color: #5d5d5d;
 }
 
 #player-strength-value {
-    color: #ea323c;
+  color: #ea323c;
 }
 
 #rare-drop-message {
-    display: flex;
-    gap: 5px;
+  display: flex;
+  gap: 5px;
 }
 
 #added-stat-value {
-    color: #99e65f;
+  color: #99e65f;
 }
 
 #removed-stat-value {
-    color: #f5555d;
+  color: #f5555d;
 }
 
 #board1 {
-    display: none;
+  display: none;
 }
 
 .entrance {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .entrance.open#side {
-    cursor: url('assets/sprites/cursors/browser/arrow-right.png'), auto;
+  cursor: url('assets/sprites/cursors/browser/arrow-right.png'), auto;
 }
 
 .entrance.open#up {
-    cursor: url('assets/sprites/cursors/browser/arrow-up.png'), auto;
+  cursor: url('assets/sprites/cursors/browser/arrow-up.png'), auto;
 }
 
 .entrance.open#down {
-    cursor: url('assets/sprites/cursors/browser/arrow-down.png'), auto;
+  cursor: url('assets/sprites/cursors/browser/arrow-down.png'), auto;
 }
 
 .entrance.closed {
-    cursor: url('assets/sprites/cursors/browser/close.png'), auto;
+  cursor: url('assets/sprites/cursors/browser/close.png'), auto;
 }
 
 #area-info-display,
 #area-requirement-display,
 #area-enter-display {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.25);
-    text-shadow: 2px 2px 0px black;
-    padding: 2px 5px;
-    font-size: 12px;
-    pointer-events: none;
-    width: max-content;
-    z-index: 1000;
-    color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.25);
+  text-shadow: 2px 2px 0px black;
+  padding: 2px 5px;
+  font-size: 12px;
+  pointer-events: none;
+  width: max-content;
+  z-index: 1000;
+  color: #fff;
 }
 
 #area-info-display {
-    top: 6px;
+  top: 6px;
 }
 
 #area-requirement-display {
-    top: 24px;
-    color: #f68187;
+  top: 24px;
+  color: #f68187;
 }
 
 #area-enter-display {
-    top: 24px;
-    color: #99e65f;
+  top: 24px;
+  color: #99e65f;
 }
 
 #area-name-label {
-    color: #fff;
+  color: #fff;
 }
 
 #area-id-label {
-    color: #c7cfdd;
+  color: #c7cfdd;
 }
 
 #statistics {
-    display: flex;
-    width: calc(5 * 100px + 4 * 8px);
-    height: calc(3 * 100px + 2 * 8px);
+  display: flex;
+  width: calc(5 * 100px + 4 * 8px);
+  height: calc(3 * 100px + 2 * 8px);
 }
 
 .stats {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .stats div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .stats div p img,
 #player-level-label img,
 #player-health-label img,
 .rare-drop-message img {
-    image-rendering: pixelated;
-    background-size: 400%;
-    width: 16px;
-    height: 16px;
+  image-rendering: pixelated;
+  background-size: 400%;
+  width: 16px;
+  height: 16px;
 }
 
 .stats div p,
 #player-level-label,
 #player-health-label,
 #magic-find {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
 }
 
 #ability-name {
-    color: #ffc825;
+  color: #ffc825;
 }
 
 .npc-popup {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    color: white;
-    z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  z-index: 1000;
 }
 
 .npc-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 80px);
-    margin: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 80px);
+  margin: 40px;
 }
 
 .npc-info-container {
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #3d3d3d;
-    width: 400px;
-    padding: 20px;
-    gap: 4px;
-    box-shadow: 4px 4px 0px black;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d3d3d;
+  width: 400px;
+  padding: 20px;
+  gap: 4px;
+  box-shadow: 4px 4px 0px black;
 }
 
 .npc-image {
-    image-rendering: pixelated;
-    width: calc(32px * 5);
-    height: calc(32px * 5);
+  image-rendering: pixelated;
+  width: calc(32px * 5);
+  height: calc(32px * 5);
 }
 
 .npc-name {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .npc-converstaion-box {
-    width: 100%;
-    background-color: #3d3d3d;
-    height: calc(100% - 40px);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 4px 4px 0px black;
+  width: 100%;
+  background-color: #3d3d3d;
+  height: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 4px 0px black;
 }
 
 .npc-dialogue {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .npc-choices-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .npc-button {
-    background-color: #515151;
-    box-shadow: 4px 4px 0px black;
-    color: white;
-    border: none;
-    cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
-    height: 40px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #515151;
+  box-shadow: 4px 4px 0px black;
+  color: white;
+  border: none;
+  cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

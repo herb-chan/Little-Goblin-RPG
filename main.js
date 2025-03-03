@@ -413,7 +413,6 @@ class Equipable extends Item {
     this.applyStats(player);
     console.log(`Equipped ${this.name} to ${this.slot} slot`);
 
-  
     const slotElement = document.querySelector(
       `.equipment-slot[data-slot="${this.slot}"]`
     );
@@ -425,7 +424,6 @@ class Equipable extends Item {
       img.className = 'item-sprite';
       slotElement.appendChild(img);
 
-    
       slotElement.draggable = true;
       slotElement.ondragstart = drag;
       slotElement.ondragend = dragEnd;
@@ -436,7 +434,6 @@ class Equipable extends Item {
     player.equipment[this.slot] = null;
     this.removeStats(player);
 
-  
     const slotElement = document.querySelector(
       `.equipment-slot[data-slot="${this.slot}"]`
     );
@@ -603,13 +600,6 @@ class Player {
     this.updateInventoryDisplay();
   }
 
-  swapItems(fromIndex, toIndex) {
-    const temp = this.inventory[fromIndex];
-    this.inventory[fromIndex] = this.inventory[toIndex];
-    this.inventory[toIndex] = temp;
-    this.updateInventoryDisplay();
-  }
-
   gather(gatherable) {
     if (this.baseStats.gatheringPower < gatherable.gatheringPower) {
       console.log(
@@ -630,10 +620,8 @@ class Player {
   updateInventoryDisplay() {
     const inventoryContainer = document.getElementById('inventory');
 
-  
     inventoryContainer.innerHTML = '';
 
-  
     this.inventory.forEach((item, index) => {
       const slot = createElement(
         'div',
@@ -665,7 +653,6 @@ class Player {
           slot.textContent = `${item.name} x${item.quantity}`;
         }
 
-      
         slot.addEventListener('mouseenter', (event) =>
           showTooltip(event, item)
         );
@@ -675,7 +662,6 @@ class Player {
       inventoryContainer.appendChild(slot);
     });
 
-  
     const equipmentSlots = document.querySelectorAll('.equipment-slot');
     equipmentSlots.forEach((slot) => {
       slot.ondragover = allowDrop;
@@ -684,7 +670,6 @@ class Player {
       slot.ondragend = dragEnd;
     });
 
-  
     const trashDiv = createElement('div', '', 'trash');
     trashDiv.textContent = 'Trash';
     trashDiv.ondrop = drop;
@@ -744,17 +729,7 @@ class Player {
     stats.forEach(({ id, value }) => updateTextContent(id, value));
   }
 
-  canAttack(x, y) {
-    const dx = Math.abs(this.position.x - x);
-    const dy = Math.abs(this.position.y - y);
-    return dx <= 1 && dy <= 1;
-  }
-
   attack(enemy) {
-    this.dealDamage(enemy);
-  }
-
-  dealDamage(enemy) {
     const damage = this.baseStats.attack + this.baseStats.strength / 2;
     enemy.receiveDamage(damage);
     console.log(`${this.name} dealt ${damage} damage to ${enemy.name}`);
@@ -868,6 +843,7 @@ function drop(event) {
 }
 
 function showTooltip(event, item) {
+  hideTooltip();
   const tooltip = createElement('div', 'tooltip');
 
   const statsLabels = {
@@ -886,9 +862,7 @@ function showTooltip(event, item) {
     magicFind: 'Magic Find',
   };
 
-
   const formatNumber = (num) => num.toLocaleString('en').replace(/,/g, ',');
-
 
   let statsHTML = item.stats
     ? Object.entries(statsLabels)
@@ -906,7 +880,6 @@ function showTooltip(event, item) {
         .join('')
     : '';
 
-
   let effectsHTML = item.effects
     ? Object.entries(item.effects)
         .map(
@@ -919,7 +892,6 @@ function showTooltip(event, item) {
     : '';
 
   console.log(effectsHTML);
-
 
   let sellPriceHTML =
     item.sell_value > 0
@@ -1354,7 +1326,6 @@ function showEntrancesInfo() {
 
   const entrances = currentAreaElement.querySelectorAll('.entrance');
   entrances.forEach((entrance) => {
-  
     while (entrance.firstChild) {
       entrance.removeChild(entrance.firstChild);
     }
@@ -1365,12 +1336,10 @@ function showEntrancesInfo() {
     console.log(entrance.dataset.entranceid);
     console.log(getCurrentArea().entrances[entrance.dataset.entranceid]);
 
-  
     const linkedArea = areasData.find((area) => area.id === entranceData);
     if (linkedArea) {
       console.log(`Linked area for entrance ${entranceId}:`, linkedArea);
 
-    
       const dangerousness = getDangerousnessLevel(linkedArea.level);
       createAndAppendElement(
         entrance,
@@ -1382,7 +1351,6 @@ function showEntrancesInfo() {
           : `[<span id='dangerousness-impossible'><img src='assets/sprites/icons/skull.png'></span>] <span>${linkedArea.name}</span>`
       );
 
-    
       if (player.level < linkedArea.level) {
         createAndAppendElement(
           entrance,
