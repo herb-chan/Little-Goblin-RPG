@@ -1,0 +1,36 @@
+[
+  {
+    "id": "fire-biome-plains1",
+    "name": "Bushy Fire Plains",
+    "level": 1,
+    "enemies": ["fire-goblin"],
+    "gatherables": ["fire-bush"],
+    "npcs": ["friendly-npc"],
+    "entrances": {
+      "entrance0": "fire-biome-plains2",
+      "entrance1": "fire-cave-biome"
+    }
+  },
+  {
+    "id": "fire-biome-plains2",
+    "name": "Rocky Fire Plains",
+    "level": 5,
+    "enemies": ["fire-goblin"],
+    "gatherables": ["stone"],
+    "npcs": [],
+    "entrances": {
+      "entrance0": "fire-biome-plains1"
+    }
+  },
+  {
+    "id": "fire-cave-biome",
+    "name": "Fire Cave",
+    "level": 20,
+    "enemies": ["fire-goblin"],
+    "gatherables": ["stone"],
+    "npcs": [],
+    "entrances": {
+      "entrance0": "fire-biome-plains1"
+    }
+  }
+]

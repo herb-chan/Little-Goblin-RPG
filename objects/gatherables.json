@@ -1,0 +1,46 @@
+[
+  {
+    "id": "stone",
+    "name": "Stone",
+    "biome-id": "fire",
+    "loot-table": [
+      {
+        "id": "stone-fragment",
+        "min": 1,
+        "max": 3,
+        "chance": 100
+      },
+      {
+        "id": "rare-gem",
+        "min": 1,
+        "max": 1,
+        "chance": 5
+      }
+    ],
+    "gathering-speed": 2,
+    "gathering-power": 1,
+    "experience": 15
+  },
+  {
+    "id": "fire-bush",
+    "name": "Fire Bush",
+    "biome-id": "fire",
+    "loot-table": [
+      {
+        "id": "berry",
+        "min": 1,
+        "max": 5,
+        "chance": 100
+      },
+      {
+        "id": "rare-herb",
+        "min": 1,
+        "max": 1,
+        "chance": 10
+      }
+    ],
+    "gathering-speed": 1,
+    "gathering-level": 1,
+    "experience": 15
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "crown-of-greed",
+    "name": "Crown of Greed",
+    "description": "Forged from avarice and adorned with the regrets of the foolish. Whispers promises of wealth but ensures that every debt is paid… one way or another.",
+    "quantity": 1,
+    "sprite": "sprites/items/armours/helmets/crown-of-greed.png",
+    "sell_value": 10000,
+    "buy_value": 0,
+    "rarity": "legendary",
+    "type": "helmet",
+    "slot": "helmet",
+    "stats": {},
+    "effects": {
+      "debt": "You can purchase items without gold, but your debt accrues interest. Remember: the crown always collects its due."
+    }
+  },
+
+  {
+    "id": "hollow-heart",
+    "name": "Hollow Heart",
+    "description": "A heart stripped of warmth, yet refusing to stop beating. It grants resilience, but only through conquest.",
+    "quantity": 1,
+    "sprite": "sprites/items/equipments/talismans/hollow-heart.png",
+    "sell_value": 10000,
+    "buy_value": 0,
+    "rarity": "epic",
+    "type": "talisman",
+    "slot": "talisman",
+    "stats": {
+      "health": 75
+    },
+    "effects": {
+      "resilience": "Increases max HP, but you can no longer heal through potions or spells—only by defeating enemies."
+    }
+  },
+
+  {
+    "id": "poison-talisman",
+    "name": "Poison Talisman",
+    "description": "A sinister talisman pulsing with toxic energy. Handle with care — unless you like your fingers green.",
+    "quantity": 1,
+    "sprite": "sprites/items/equipments/talismans/poison-talisman.png",
+    "sell_value": 1000,
+    "buy_value": 0,
+    "rarity": "rare",
+    "type": "talisman",
+    "slot": "talisman",
+    "stats": {
+      "attack": 15,
+      "strength": 7
+    },
+    "effects": {
+      "toxic-curse": "Increases damage dealt but also applies a lingering poison to the wearer that reduces health over time."
+    }
+  }
+]

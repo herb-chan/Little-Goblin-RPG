@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser RPG</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="playable-and-bottom-bar">
+      <div class="game-board" data-area="fire-biome-plains1">
+        <div class="square fire-biome" data-coord="0,0" id="fire-biome-tile2">
+          <!-- <div class="player" id="player"></div> -->
+        </div>
+        <div class="square fire-biome" data-coord="1,0"></div>
+        <div class="square fire-biome" data-coord="2,0"></div>
+        <div
+          class="square fire-biome"
+          data-coord="3,0"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="4,0"></div>
+        <div class="square fire-biome" data-coord="5,0"></div>
+        <div
+          class="square fire-biome"
+          data-coord="6,0"
+          id="fire-biome-tile2"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="7,0"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,0"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="9,0"></div>
+        <div
+          class="square fire-biome"
+          data-coord="10,0"
+          id="fire-biome-tile4"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,0"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="12,0"></div>
+
+        <div class="square fire-biome" data-coord="0,1"></div>
+        <div
+          class="square fire-biome npctable"
+          data-coord="1,1"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="2,1"
+          id="fire-biome-tile4"
+        ></div>
+        <div class="square fire-biome spawnable" data-coord="3,1"></div>
+        <div
+          class="square fire-biome"
+          data-coord="4,1"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="5,1"></div>
+        <div class="square fire-biome resourceful" data-coord="6,1"></div>
+        <div
+          class="square fire-biome"
+          data-coord="7,1"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,1"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome" data-coord="9,1"></div>
+        <div class="square fire-biome resourceful" data-coord="10,1"></div>
+        <div class="square fire-biome" data-coord="11,1"></div>
+        <div
+          class="square fire-biome"
+          data-coord="12,1"
+          id="fire-biome-tile1"
+        ></div>
+
+        <div class="square fire-biome" data-coord="0,2"></div>
+        <div
+          class="square fire-biome resourceful"
+          data-coord="1,2"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="2,2"></div>
+        <div
+          class="square fire-biome"
+          data-coord="3,2"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="4,2"></div>
+        <div
+          class="square fire-biome"
+          data-coord="5,2"
+          id="fire-biome-tile5"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="6,2"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="7,2"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="8,2"></div>
+        <div
+          class="square fire-biome"
+          data-coord="9,2"
+          id="fire-biome-tile4"
+        ></div>
+        <div class="square fire-biome" data-coord="10,2"></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,2"
+          id="fire-biome-tile2"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="12,2"
+          id="fire-biome-tile3"
+        ></div>
+
+        <div
+          class="square fire-biome"
+          data-coord="0,3"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="1,3"></div>
+        <div class="square fire-biome" data-coord="2,3"></div>
+        <div class="square fire-biome" data-coord="3,3">
+          <div
+            class="entrance closed"
+            id="side"
+            data-entranceid="entrance0"
+          ></div>
+        </div>
+        <div
+          class="square fire-biome"
+          data-coord="4,3"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="5,3"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="6,3"
+          id="fire-biome-tile5"
+        ></div>
+        <div class="square fire-biome" data-coord="7,3"></div>
+        <div class="square fire-biome" data-coord="8,3">
+          <div
+            class="entrance closed"
+            id="down"
+            data-entranceid="entrance1"
+          ></div>
+        </div>
+        <div
+          class="square fire-biome"
+          data-coord="9,3"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="10,3"></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,3"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="12,3"></div>
+
+        <div class="square fire-biome" data-coord="0,4"></div>
+        <div
+          class="square fire-biome"
+          data-coord="1,4"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="2,4"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="3,4"></div>
+        <div class="square fire-biome" data-coord="4,4"></div>
+        <div
+          class="square fire-biome"
+          data-coord="5,4"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome spawnable" data-coord="6,4"></div>
+        <div class="square fire-biome" data-coord="7,4"></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,4"
+          id="fire-biome-tile5"
+        ></div>
+        <div
+          class="square fire-biome resourceful"
+          data-coord="9,4"
+          id="fire-biome-tile2"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="10,4"
+          id="fire-biome-tile2"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,4"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="12,4"
+          id="fire-biome-tile4"
+        ></div>
+
+        <div
+          class="square fire-biome"
+          data-coord="0,5"
+          id="fire-biome-tile4"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="1,5"
+          id="fire-biome-tile5"
+        ></div>
+        <div class="square fire-biome" data-coord="2,5"></div>
+        <div
+          class="square fire-biome"
+          data-coord="3,5"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="4,5"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="5,5"></div>
+        <div
+          class="square fire-biome"
+          data-coord="6,5"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome spawnable" data-coord="7,5"></div>
+        <div class="square fire-biome" data-coord="8,5"></div>
+        <div class="square fire-biome" data-coord="9,5"></div>
+        <div class="square fire-biome spawnable" data-coord="10,5"></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,5"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="12,5"></div>
+
+        <div
+          class="square fire-biome"
+          data-coord="0,6"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="1,6"></div>
+        <div class="square fire-biome resourceful" data-coord="2,6"></div>
+        <div
+          class="square fire-biome"
+          data-coord="3,6"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome spawnable" data-coord="4,6"></div>
+        <div class="square fire-biome" data-coord="5,6"></div>
+        <div class="square fire-biome" data-coord="6,6"></div>
+        <div class="square fire-biome" data-coord="7,6"></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,6"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome" data-coord="9,6"></div>
+        <div
+          class="square fire-biome"
+          data-coord="10,6"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome spawnable"
+          data-coord="11,6"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="12,6"></div>
+
+        <div class="square fire-biome" data-coord="0,7"></div>
+        <div class="square fire-biome spawnable" data-coord="1,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="2,7"
+          id="fire-biome-tile5"
+        ></div>
+        <div class="square fire-biome" data-coord="3,7"></div>
+        <div class="square fire-biome" data-coord="4,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="5,7"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome spawnable" data-coord="6,7"></div>
+        <div class="square fire-biome" data-coord="7,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,7"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome" data-coord="9,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="10,7"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="11,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="12,7"
+          id="fire-biome-tile2"
+        ></div>
+      </div>
+      <div class="game-board" data-area="fire-biome-plains2">
+        <div class="square fire-biome" data-coord="0,0" id="fire-biome-tile2">
+          <!-- <div class="player" id="player"></div> -->
+        </div>
+        <div class="square fire-biome" data-coord="1,0"></div>
+        <div class="square fire-biome" data-coord="2,0"></div>
+        <div
+          class="square fire-biome"
+          data-coord="3,0"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="4,0"></div>
+        <div class="square fire-biome" data-coord="5,0"></div>
+        <div
+          class="square fire-biome"
+          data-coord="6,0"
+          id="fire-biome-tile2"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="7,0"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,0"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="9,0"></div>
+        <div
+          class="square fire-biome"
+          data-coord="10,0"
+          id="fire-biome-tile4"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,0"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="12,0"></div>
+
+        <div class="square fire-biome" data-coord="0,1"></div>
+        <div
+          class="square fire-biome"
+          data-coord="1,1"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="2,1"
+          id="fire-biome-tile4"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="3,1"></div>
+        <div
+          class="square fire-biome"
+          data-coord="4,1"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="5,1"></div>
+        <div class="square fire-biome resourceful" data-coord="6,1"></div>
+        <div
+          class="square fire-biome"
+          data-coord="7,1"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,1"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome" data-coord="9,1"></div>
+        <div class="square fire-biome resourceful" data-coord="10,1"></div>
+        <div class="square fire-biome" data-coord="11,1"></div>
+        <div
+          class="square fire-biome"
+          data-coord="12,1"
+          id="fire-biome-tile1"
+        ></div>
+
+        <div class="square fire-biome" data-coord="0,2"></div>
+        <div
+          class="square fire-biome resourceful"
+          data-coord="1,2"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="2,2"></div>
+        <div
+          class="square fire-biome"
+          data-coord="3,2"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="4,2"></div>
+        <div
+          class="square fire-biome"
+          data-coord="5,2"
+          id="fire-biome-tile5"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="6,2"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="7,2"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="8,2">
+          <div
+            class="entrance closed"
+            id="side"
+            data-entranceid="entrance0"
+          ></div>
+        </div>
+        <div
+          class="square fire-biome"
+          data-coord="9,2"
+          id="fire-biome-tile4"
+        ></div>
+        <div class="square fire-biome" data-coord="10,2"></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,2"
+          id="fire-biome-tile2"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="12,2"
+          id="fire-biome-tile3"
+        ></div>
+
+        <div
+          class="square fire-biome"
+          data-coord="0,3"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="1,3"></div>
+        <div class="square fire-biome" data-coord="2,3"></div>
+        <div class="square fire-biome" data-coord="3,3"></div>
+        <div
+          class="square fire-biome"
+          data-coord="4,3"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="5,3"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="6,3"
+          id="fire-biome-tile5"
+        ></div>
+        <div class="square fire-biome" data-coord="7,3"></div>
+        <div class="square fire-biome" data-coord="8,3"></div>
+        <div
+          class="square fire-biome"
+          data-coord="9,3"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="10,3"></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,3"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="12,3"></div>
+
+        <div class="square fire-biome" data-coord="0,4"></div>
+        <div
+          class="square fire-biome"
+          data-coord="1,4"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="2,4"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="3,4"></div>
+        <div class="square fire-biome" data-coord="4,4"></div>
+        <div
+          class="square fire-biome"
+          data-coord="5,4"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="6,4"></div>
+        <div class="square fire-biome" data-coord="7,4"></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,4"
+          id="fire-biome-tile5"
+        ></div>
+        <div
+          class="square fire-biome resourceful"
+          data-coord="9,4"
+          id="fire-biome-tile2"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="10,4"
+          id="fire-biome-tile2"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,4"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="12,4"
+          id="fire-biome-tile4"
+        ></div>
+
+        <div
+          class="square fire-biome"
+          data-coord="0,5"
+          id="fire-biome-tile4"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="1,5"
+          id="fire-biome-tile5"
+        ></div>
+        <div class="square fire-biome" data-coord="2,5"></div>
+        <div
+          class="square fire-biome"
+          data-coord="3,5"
+          id="fire-biome-tile3"
+        ></div>
+        <div
+          class="square fire-biome"
+          data-coord="4,5"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="5,5"></div>
+        <div
+          class="square fire-biome"
+          data-coord="6,5"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="7,5"></div>
+        <div class="square fire-biome" data-coord="8,5"></div>
+        <div class="square fire-biome" data-coord="9,5"></div>
+        <div class="square fire-biome resourceful" data-coord="10,5"></div>
+        <div
+          class="square fire-biome"
+          data-coord="11,5"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="12,5"></div>
+
+        <div
+          class="square fire-biome"
+          data-coord="0,6"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="1,6"></div>
+        <div class="square fire-biome resourceful" data-coord="2,6"></div>
+        <div
+          class="square fire-biome"
+          data-coord="3,6"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="4,6"></div>
+        <div class="square fire-biome" data-coord="5,6"></div>
+        <div class="square fire-biome" data-coord="6,6"></div>
+        <div class="square fire-biome" data-coord="7,6"></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,6"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome" data-coord="9,6"></div>
+        <div
+          class="square fire-biome"
+          data-coord="10,6"
+          id="fire-biome-tile1"
+        ></div>
+        <div
+          class="square fire-biome resourceful"
+          data-coord="11,6"
+          id="fire-biome-tile2"
+        ></div>
+        <div class="square fire-biome" data-coord="12,6"></div>
+
+        <div class="square fire-biome" data-coord="0,7"></div>
+        <div class="square fire-biome resourceful" data-coord="1,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="2,7"
+          id="fire-biome-tile5"
+        ></div>
+        <div class="square fire-biome" data-coord="3,7"></div>
+        <div class="square fire-biome" data-coord="4,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="5,7"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome resourceful" data-coord="6,7"></div>
+        <div class="square fire-biome" data-coord="7,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="8,7"
+          id="fire-biome-tile3"
+        ></div>
+        <div class="square fire-biome" data-coord="9,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="10,7"
+          id="fire-biome-tile1"
+        ></div>
+        <div class="square fire-biome" data-coord="11,7"></div>
+        <div
+          class="square fire-biome"
+          data-coord="12,7"
+          id="fire-biome-tile2"
+        ></div>
+      </div>
+      <div class="bottom-bar">
+        <div class="area-info">
+          <p>
+            <span id="area-name-label"></span> <span id="area-id-label"></span>
+          </p>
+          <p><span id="enemies-list"></span></p>
+          <p><span id="gatherables-list"></span></p>
+          <p>
+            <span id="entrances-label"></span>
+            <span id="entrances-value"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="player-container">
+      <div id="equipment">
+        <div class="equipable-slots">
+          <div class="wearable-slots">
+            <div class="equipment-slot" id="cloak" data-slot="cloak">Cloak</div>
+            <div class="equipment-slot" id="gloves" data-slot="gloves">
+              Gloves
+            </div>
+            <div class="equipment-slot" id="belt" data-slot="belt">Belt</div>
+            <div class="equipment-slot" id="weapon" data-slot="weapon">
+              Weapon
+            </div>
+          </div>
+          <div class="armour-slots">
+            <div class="equipment-slot" id="helmet" data-slot="helmet">
+              Helmet
+            </div>
+            <div class="equipment-slot" id="chestplate" data-slot="chestplate">
+              Chestplate
+            </div>
+            <div class="equipment-slot" id="leggings" data-slot="leggings">
+              Leggings
+            </div>
+            <div class="equipment-slot" id="boots" data-slot="boots">Boots</div>
+          </div>
+          <div class="wearable-slots">
+            <div class="equipment-slot" id="necklace" data-slot="necklace">
+              Necklace
+            </div>
+            <div class="equipment-slot" id="ring" data-slot="ring">Ring</div>
+            <div class="equipment-slot" id="talisman" data-slot="talisman">
+              Talisman
+            </div>
+            <div class="equipment-slot" id="secondary" data-slot="secondary">
+              Secondary
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="switch-additional-container">
+        <div id="player-view-switch">
+          <button class="switch-view" onclick="switchPlayerView('inventory')">
+            Inventory
+          </button>
+          <button class="switch-view" onclick="switchPlayerView('statistics')">
+            Statistics
+          </button>
+        </div>
+        <div class="view" id="inventory"></div>
+        <div class="view" id="statistics">
+          <div class="stats">
+            <div>
+              <p id="player-attack-label">
+                <img src="sprites/icons/attack.png" /> Attack:
+                <span id="player-attack-value"></span>
+              </p>
+              <p id="player-strength-label">
+                <img src="sprites/icons/strength.png" /> Strength:
+                <span id="player-strength-value"></span>
+              </p>
+              <p id="player-defense-label">
+                <img src="sprites/icons/defense.png" /> Defense:
+                <span id="player-defense-value"></span>
+              </p>
+              <p id="player-attack-speed-label">
+                <img src="sprites/icons/attack-speed.png" /> Attack speed:
+                <span id="player-attack-speed-value"></span>
+              </p>
+              <p id="player-health-label">
+                <img src="sprites/icons/health.png" /> Health:
+                <span id="player-health-value"></span>
+              </p>
+            </div>
+            <div>
+              <p id="player-wisdom-label">
+                <img src="sprites/icons/wisdom.png" /> Combat Wisdom:
+                <span id="player-combat-wisdom-value"></span>
+              </p>
+              <p id="player-wisdom-label">
+                <img src="sprites/icons/wisdom.png" /> Gathering Wisdom:
+                <span id="player-gathering-wisdom-value"></span>
+              </p>
+              <p id="player-speed-label">
+                <img src="sprites/icons/speed.png" /> Speed:
+                <span id="player-speed-value"></span>
+              </p>
+              <p id="player-magic-find-label">
+                <img src="sprites/icons/magic-find.png" /> Magic Find:
+                <span id="player-magic-find-value"></span>
+              </p>
+              <p id="player-level-label">
+                <img src="sprites/icons/level.png" /> Level:
+                <span id="player-level-value"></span>
+                <span id="player-experience-value"></span>
+              </p>
+            </div>
+            <div>
+              <p id="player-fortune-label">
+                <img src="sprites/icons/fortune.png" /> Combat Fortune:
+                <span id="player-combat-fortune-value"></span>
+              </p>
+              <p id="player-fortune-label">
+                <img src="sprites/icons/fortune.png" /> Gathering Fortune:
+                <span id="player-gathering-fortune-value"></span>
+              </p>
+              <p id="player-gathering-power-label">
+                <img src="sprites/icons/gathering-power.png" /> Gathering Power:
+                <span id="player-gathering-power-value"></span>
+              </p>
+              <p id="player-gathering-speed-label">
+                <img src="sprites/icons/gathering-speed.png" /> Gathering Speed:
+                <span id="player-gathering-speed-value"></span>
+              </p>
+              <p id="player-gold-label">
+                <img src="sprites/icons/gold.png" /> Gold:
+                <span id="player-gold-value"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

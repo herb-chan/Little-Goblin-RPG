@@ -1,0 +1,22 @@
+[
+  {
+    "id": "friendly-npc",
+    "name": "Friendly NPC",
+    "biome-id": "fire",
+    "loot-table": [],
+    "base-stats": {
+      "health": 100,
+      "attack": 0,
+      "defense": 0,
+      "strength": 0,
+      "attackSpeed": 0,
+      "speed": 0
+    },
+    "gold": 0,
+    "level": 1,
+    "experience": 0,
+    "dialogue-options": {
+      "something": ["elo"]
+    }
+  }
+]

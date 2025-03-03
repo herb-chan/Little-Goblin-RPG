@@ -1,0 +1,77 @@
+[
+  {
+    "id": "goblin-ear",
+    "name": "Goblin Ear",
+    "description": "A severed goblin ear, proof of your victory — or a questionable fashion statement.",
+    "sprite": "sprites/items/goblin-loot/goblin-ear.png",
+    "rarity": "common",
+    "type": "junk",
+    "sell_value": 5,
+    "buy_value": 10
+  },
+  {
+    "id": "goblin-tooth",
+    "name": "Goblin Tooth",
+    "description": "A jagged goblin tooth, perfect for a necklace — or a very unsettling gift.",
+    "sprite": "sprites/items/goblin-loot/goblin-tooth.png",
+    "rarity": "uncommon",
+    "type": "junk",
+    "sell_value": 3,
+    "buy_value": 10
+  },
+  {
+    "id": "goblin-eye",
+    "name": "Goblin Eye",
+    "description": "A glassy green eye that once twinkled with mischief. Now it just stares… forever.",
+    "sprite": "sprites/items/goblin-loot/goblin-eye.png",
+    "rarity": "rare",
+    "type": "junk",
+    "sell_value": 7,
+    "buy_value": 10
+  },
+
+  {
+    "id": "stone-fragment",
+    "name": "Stone Fragment",
+    "description": "A fragment of stone.",
+    "quantity": 1,
+    "sprite": "sprites/items/materials/stone-fragment.png",
+    "sell_value": 1,
+    "buy_value": 2,
+    "rarity": "common",
+    "type": "material"
+  },
+  {
+    "id": "rare-gem",
+    "name": "Rare Gem",
+    "description": "A rare and valuable gem.",
+    "quantity": 1,
+    "sprite": "sprites/items/goblin-loot/goblin-ear.png",
+    "sell_value": 50,
+    "buy_value": 100,
+    "rarity": "rare",
+    "type": "material"
+  },
+  {
+    "id": "berry",
+    "name": "Berry",
+    "description": "A juicy berry.",
+    "quantity": 1,
+    "sprite": "sprites/items/goblin-loot/goblin-ear.png",
+    "sell_value": 1,
+    "buy_value": 2,
+    "rarity": "common",
+    "type": "food"
+  },
+  {
+    "id": "rare-herb",
+    "name": "Rare Herb",
+    "description": "A rare and medicinal herb.",
+    "quantity": 1,
+    "sprite": "sprites/items/goblin-loot/goblin-ear.png",
+    "sell_value": 20,
+    "buy_value": 40,
+    "rarity": "uncommon",
+    "type": "material"
+  }
+]
