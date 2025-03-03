@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'TinyPixel';
-    src: url('fonts/tinypixel.otf') format('opentype');
+    src: url('assets/fonts/tinypixel.otf') format('opentype');
 }
 
 * {
@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: url('sprites/cursors/computer-systems/pointer.png'), auto;
+    cursor: url('assets/sprites/cursors/computer-systems/pointer.png'), auto;
     image-rendering: pixelated;
     overflow: hidden;
 }
@@ -49,79 +49,79 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url('sprites/player/player.png');
+    background-image: url('assets/sprites/player/player.png');
     background-size: cover;
     background-repeat: no-repeat;
     image-rendering: pixelated;
 }
 
 .fire-biome {
-    background-image: url('sprites/biomes/fire/terrain.png');
+    background-image: url('assets/sprites/tiles/fire/terrain.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #fire-biome-tile1 {
-    background-image: url('sprites/biomes/fire/tile1.png');
+    background-image: url('assets/sprites/tiles/fire/tile1.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #fire-biome-tile2 {
-    background-image: url('sprites/biomes/fire/tile2.png');
+    background-image: url('assets/sprites/tiles/fire/tile2.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #fire-biome-tile3 {
-    background-image: url('sprites/biomes/fire/tile3.png');
+    background-image: url('assets/sprites/tiles/fire/tile3.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #fire-biome-tile4 {
-    background-image: url('sprites/biomes/fire/tile4.png');
+    background-image: url('assets/sprites/tiles/fire/tile4.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #fire-biome-tile5 {
-    background-image: url('sprites/biomes/fire/tile5.png');
+    background-image: url('assets/sprites/tiles/fire/tile5.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .grass-biome {
-    background-image: url('sprites/biomes/grass/terrain.png');
+    background-image: url('assets/sprites/tiles/grass/terrain.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .poison-biome {
-    background-image: url('sprites/biomes/poison/terrain.png');
+    background-image: url('assets/sprites/tiles/poison/terrain.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .goblin {
-    background-image: url('sprites/goblins/goblin.png');
+    background-image: url('assets/sprites/entities/goblins/goblin.png');
 }
 
 .fire-goblin {
-    background-image: url('sprites/goblins/fire-goblin.png');
+    background-image: url('assets/sprites/entities/goblins/fire-goblin.png');
 }
 
 .poison-goblin {
-    background-image: url('sprites/goblins/poison-goblin.png');
+    background-image: url('assets/sprites/entities/goblins/poison-goblin.png');
 }
 
 .stone {
-    background-image: url('sprites/gatherables/stone.png');
+    background-image: url('assets/sprites/entities/gatherables/stone.png');
     background-size: cover;
 }
 
 .fire-bush {
-    background-image: url('sprites/gatherables/fire-bush.png');
+    background-image: url('assets/sprites/entities/gatherables/fire-bush.png');
     background-size: cover;
 }
 
@@ -138,7 +138,7 @@ body {
 }
 
 .friendly-npc {
-    background-image: url('sprites/npcs/friendly-npc.png');
+    background-image: url('assets/sprites/entities/npcs/friendly-npc.png');
     background-size: cover;
 }
 
@@ -153,7 +153,7 @@ body {
 .enemy:hover,
 .gatherable:hover,
 .npctable:hover {
-    cursor: url('sprites/cursors/computer-systems/move.png'), auto;
+    cursor: url('assets/sprites/cursors/computer-systems/move.png'), auto;
 }
 
 @keyframes goblin-idle {
@@ -276,7 +276,7 @@ body {
     box-shadow: 4px 4px 0px black;
     color: white;
     border: none;
-    cursor: url('sprites/cursors/computer-systems/hand-hover.png'), auto;
+    cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
     height: 100%;
     width: 100%;
     display: flex;
@@ -343,7 +343,7 @@ body {
 }
 
 .inventory-slot.has-item:hover {
-    cursor: url('sprites/cursors/computer-systems/hand-hover.png'), auto;
+    cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
     image-rendering: pixelated;
 }
 
@@ -619,19 +619,19 @@ body {
 }
 
 .entrance.open#side {
-    cursor: url('sprites/cursors/browser/arrow-right.png'), auto;
+    cursor: url('assets/sprites/cursors/browser/arrow-right.png'), auto;
 }
 
 .entrance.open#up {
-    cursor: url('sprites/cursors/browser/arrow-up.png'), auto;
+    cursor: url('assets/sprites/cursors/browser/arrow-up.png'), auto;
 }
 
 .entrance.open#down {
-    cursor: url('sprites/cursors/browser/arrow-down.png'), auto;
+    cursor: url('assets/sprites/cursors/browser/arrow-down.png'), auto;
 }
 
 .entrance.closed {
-    cursor: url('sprites/cursors/browser/close.png'), auto;
+    cursor: url('assets/sprites/cursors/browser/close.png'), auto;
 }
 
 #area-info-display,
@@ -786,7 +786,7 @@ body {
     box-shadow: 4px 4px 0px black;
     color: white;
     border: none;
-    cursor: url('sprites/cursors/computer-systems/hand-hover.png'), auto;
+    cursor: url('assets/sprites/cursors/computer-systems/hand-hover.png'), auto;
     height: 40px;
     width: 100%;
     display: flex;

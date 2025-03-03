@@ -771,12 +771,12 @@ function drag(event) {
 
   event.dataTransfer.setData('text', fromIndex);
   document.body.style.cursor =
-    "url('sprites/cursors/computer-systems/hand-grab.png'), auto";
+    "url('assets/sprites/cursors/computer-systems/hand-grab.png'), auto";
 }
 
 function dragEnd(event) {
   document.body.style.cursor =
-    "url('sprites/cursors/computer-systems/pointer.png'), auto";
+    "url('assets/sprites/cursors/computer-systems/pointer.png'), auto";
 }
 
 function allowDrop(event) {
@@ -1090,7 +1090,7 @@ function updateAreaInfo() {
     'area-name-label',
     dangerousness !== 'impossible'
       ? `[<span id="dangerousness-${dangerousness}">${currentArea.level}</span>] <span>${currentArea.name}</span>`
-      : `[<span id='dangerousness-impossible'><img src='sprites/icons/skull.png'></span>] <span>${currentArea.name}</span>`
+      : `[<span id='dangerousness-impossible'><img src='assets/sprites/icons/skull.png'></span>] <span>${currentArea.name}</span>`
   );
   updateTextContent('area-id-label', `(#${currentArea.id})`);
 
@@ -1213,7 +1213,7 @@ function spawnEntityForSquare(square, entityType) {
       levelNameDisplay.innerHTML =
         dangerousness !== 'impossible'
           ? `[<span id="dangerousness-${dangerousness}">${newEntity.level}</span>] <span>${newEntity.name}</span>`
-          : `[<span id='dangerousness-impossible'><img src='sprites/icons/skull.png'></span>] <span>${newEntity.name}</span>`;
+          : `[<span id='dangerousness-impossible'><img src='assets/sprites/icons/skull.png'></span>] <span>${newEntity.name}</span>`;
     } else {
       levelNameDisplay.innerHTML = newEntity.name;
     }
@@ -1280,7 +1280,7 @@ function showNPCPopup(npc) {
     'npc-converstaion-box'
   );
   createAndAppendElement(npcInfoContainer, 'img', 'npc-image', '', '', {
-    src: `sprites/npcs/${npc.id}-portrait.png`,
+    src: `assets/sprites/entities/npcs/${npc.id}-portrait.png`,
   });
   createAndAppendElement(npcInfoContainer, 'p', 'npc-name', '', `${npc.name}`);
   createAndAppendElement(
@@ -1379,7 +1379,7 @@ function showEntrancesInfo() {
         'area-info-display',
         dangerousness !== 'impossible'
           ? `[<span id="dangerousness-${dangerousness}">${linkedArea.level}</span>] <span>${linkedArea.name}</span>`
-          : `[<span id='dangerousness-impossible'><img src='sprites/icons/skull.png'></span>] <span>${linkedArea.name}</span>`
+          : `[<span id='dangerousness-impossible'><img src='assets/sprites/icons/skull.png'></span>] <span>${linkedArea.name}</span>`
       );
 
     
