@@ -2,6 +2,7 @@
   {
     "id": "friendly-npc",
     "name": "Friendly NPC",
+    "sprite": "assets/sprites/entities/npcs/friendly-npc.png",
     "biome-id": "fire",
     "loot-table": [],
     "base-stats": {

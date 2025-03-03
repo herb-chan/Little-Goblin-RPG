@@ -103,25 +103,11 @@ body {
   background-repeat: no-repeat;
 }
 
-.goblin {
-  background-image: url('assets/sprites/entities/goblins/goblin.png');
-}
-
-.fire-goblin {
-  background-image: url('assets/sprites/entities/goblins/fire-goblin.png');
-}
-
-.poison-goblin {
-  background-image: url('assets/sprites/entities/goblins/poison-goblin.png');
-}
-
 .stone {
-  background-image: url('assets/sprites/entities/gatherables/stone.png');
   background-size: cover;
 }
 
 .fire-bush {
-  background-image: url('assets/sprites/entities/gatherables/fire-bush.png');
   background-size: cover;
 }
 
@@ -138,7 +124,6 @@ body {
 }
 
 .friendly-npc {
-  background-image: url('assets/sprites/entities/npcs/friendly-npc.png');
   background-size: cover;
 }
 

@@ -2,6 +2,7 @@
   {
     "id": "goblin",
     "name": "Goblin",
+    "sprite": "assets/sprites/entities/goblins/goblin.png",
     "biome-id": "grass",
     "loot-table": [
       {
@@ -41,6 +42,7 @@
   {
     "id": "fire-goblin",
     "name": "Fire Goblin",
+    "sprite": "assets/sprites/entities/goblins/fire-goblin.png",
     "parent-id": "goblin",
     "biome-id": "fire",
     "loot-table": [
@@ -81,6 +83,7 @@
   {
     "id": "poison-goblin",
     "name": "Poison Goblin",
+    "sprite": "assets/sprites/entities/goblins/poison-goblin.png",
     "parent-id": "goblin",
     "biome-id": "poison",
     "loot-table": [

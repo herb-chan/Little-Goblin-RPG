@@ -2,6 +2,7 @@
   {
     "id": "stone",
     "name": "Stone",
+    "sprite": "assets/sprites/entities/gatherables/stone.png",
     "biome-id": "fire",
     "loot-table": [
       {
@@ -24,6 +25,7 @@
   {
     "id": "fire-bush",
     "name": "Fire Bush",
+    "sprite": "assets/sprites/entities/gatherables/fire-bush.png",
     "biome-id": "fire",
     "loot-table": [
       {

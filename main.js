@@ -44,16 +44,18 @@ class Item {
 }
 
 class Entity {
-  constructor(id, name, lootTable, parentId = null) {
+  constructor(id, name, lootTable, sprite, parentId = null) {
     this.id = id;
     this.name = name;
     this.lootTable = lootTable;
+    this.sprite = sprite;
     this.parentId = parentId;
     this.instanceId = `${id}-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   static fromJSON(data) {
     let lootTable = data['loot-table'] || [];
+    const sprite = data['sprite'] || null;
 
     if (data['parent-id']) {
       const parent = Entity.getParentObject(data['parent-id']);
@@ -62,7 +64,7 @@ class Entity {
       }
     }
 
-    return new Entity(data.id, data.name, lootTable, data['parent-id']);
+    return new Entity(data.id, data.name, lootTable, sprite, data['parent-id']);
   }
 
   static getParentObject(parentId) {
@@ -132,9 +134,10 @@ class Mob extends Entity {
     gold,
     experience,
     level,
+    sprite,
     parentId = null
   ) {
-    super(id, name, lootTable, parentId);
+    super(id, name, lootTable, sprite, parentId);
     this.baseStats = { ...baseStats };
     this.gold = gold;
     this.experience = experience;
@@ -148,6 +151,7 @@ class Mob extends Entity {
     const gold = data['gold'];
     const experience = data['experience'];
     const level = data['level'];
+    const sprite = data['sprite'];
 
     return new Mob(
       baseObject.id,
@@ -157,6 +161,7 @@ class Mob extends Entity {
       gold,
       experience,
       level,
+      sprite,
       baseObject.parentId
     );
   }
@@ -246,9 +251,10 @@ class NPC extends Mob {
     level,
     experience,
     dialogueOptions,
+    sprite,
     parentId = null
   ) {
-    super(id, name, lootTable, baseStats, gold, experience, level, parentId);
+    super(id, name, lootTable, baseStats, gold, experience, level, sprite, parentId); 
     this.dialogueOptions = dialogueOptions;
     this.relationshipPoints = 0;
   }
@@ -256,6 +262,7 @@ class NPC extends Mob {
   static fromJSON(data) {
     const baseObject = Mob.fromJSON(data);
     const dialogueOptions = data['dialogue-options'];
+    const sprite = data['sprite'];
 
     return new NPC(
       baseObject.id,
@@ -266,6 +273,7 @@ class NPC extends Mob {
       baseObject.level,
       baseObject.experience,
       dialogueOptions,
+      sprite,
       baseObject.parentId
     );
   }
@@ -279,9 +287,10 @@ class Gatherable extends Entity {
     gatheringSpeed,
     gatheringPower,
     experience,
+    sprite,
     parentId = null
   ) {
-    super(id, name, lootTable, parentId);
+    super(id, name, lootTable, sprite, parentId);
     this.gatheringSpeed = gatheringSpeed;
     this.gatheringPower = gatheringPower;
     this.experience = experience;
@@ -293,6 +302,7 @@ class Gatherable extends Entity {
     const gatheringSpeed = data['gathering-speed'];
     const gatheringPower = data['gathering-power'];
     const experience = data['experience'];
+    const sprite = data['sprite'];
 
     return new Gatherable(
       baseObject.id,
@@ -301,6 +311,7 @@ class Gatherable extends Entity {
       gatheringSpeed,
       gatheringPower,
       experience,
+      sprite,
       baseObject.parentId
     );
   }
@@ -1174,7 +1185,10 @@ function spawnEntityForSquare(square, entityType) {
       '',
       '',
       {
-        'data-instance-id': newEntity.instanceId
+        'data-instance-id': newEntity.instanceId,
+        style: {
+          backgroundImage: `url(${newEntity.sprite})`,
+        }
       }
     );
 
